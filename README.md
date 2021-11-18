@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Stop It ecommerce de Tops
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Concepto comercial
 
-## Available Scripts
+Se desarrolla una tienda online de venta de tops de todos los colores, estilos y tamaños.
 
-In the project directory, you can run:
+## Deployed on Vercel
 
-### `yarn start`
+Link: https://maimo-ecommerce.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Mejoras a futuro
+- Eliminar los css de las pages y usar styled components
+- Usar los common elements en toda la web
+- Botón de eliminar productos del carrito
+- Botón de sumar y restar la cantidad de productos
+- La forma en la que se ve el loading
+- El style de los carteles que avisan cuando se agregó un producto al carrito
+- Rever los Warnings
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Componentes
 
-### `yarn test`
+###  Aplicación
+Wrapper principal de la aplicación con React Router.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Card 
+Card con el single product
 
-### `yarn build`
+### CardContainer
+Trae el contenido de la Card desde firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###  CartDetail
+Carrito de compras con resumen de productos agregados, cantidad y precio
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+###  CheckoutForm
+Formulario del Checkout y validaciones de los campos. Nombre, Email y teléfono
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+###  Common
+Componentes con estilos para usar en toda la Web
 
-### `yarn eject`
+### Grid
+Contenedor de grilla para productos
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###  NavBar
+Navbar con menú
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Product
+Single product y add to cart
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Pages
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Category
+### Checkout
+### Home
+### Product
 
-## Learn More
+##  Contextos
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+###  CartContext
+Contexto y proveedor para el carrito. Funciones de consulta y totalización de productos.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

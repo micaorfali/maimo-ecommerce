@@ -30,7 +30,6 @@ const CardContainer = ({ catId }) => {
             }
         }
 
-
         getProducts()
     }, [catId])
 

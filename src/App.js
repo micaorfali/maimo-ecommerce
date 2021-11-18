@@ -9,7 +9,6 @@ import Category from './pages/Category'
 import Product from './pages/Product'
 import NavBar from './components/NavBar/NavBar';
 import { CartProvider } from './Contexts/CartContext';
-import Cart from './components/Cart/Cart';
 import Checkout from './pages/Checkout';
 
 function App() {
