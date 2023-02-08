@@ -1,22 +1,20 @@
-import React from 'react'
-import './Home.css'
-import Hero from '../imgs/hero-03.png'
-import {H3} from '../components/Common/Common'
-import CardContainer from '../components/CardContainer/CardContainer'
-
+import React from "react";
+import "./Home.css";
+import { H3 } from "../components/Common/Common";
+import CardContainer from "../components/CardContainer/CardContainer";
+import Hero from "../components/Hero/Hero"
 
 const Home = () => {
-    return (
-        <div>
-            <img className="hero" src={Hero} alt="hero"/>
-            <H3> Productos destacados</H3>
-            <div className="cardcont">
-                  <CardContainer /> 
-            </div>
-         
-            
-        </div>
-    )
-}
+  return (
+    <div>
+    <Hero />
 
-export default Home
+      <H3> Productos destacados</H3>
+      <div className="cardcont">
+        <CardContainer />
+      </div>
+    </div>
+  );
+};
+
+export default Home;
