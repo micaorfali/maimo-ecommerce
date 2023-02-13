@@ -12,7 +12,7 @@ const Hero = () => {
         <hr></hr>
         <h2>OFFICIAL MERCH</h2>
 
-        <StyledBOTON>Go to Shop</StyledBOTON>
+        <StyledBOTON style={{backgroundColor:"#AC9EB8"}}>Go to Shop</StyledBOTON>
       </div>
     </HeroContainer>
   );

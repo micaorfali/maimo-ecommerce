@@ -11,7 +11,7 @@ const H3 = ({ children }) => {
 
 const BOTON = ({ children }) => {
     return (
-    <StyledBOTON style={{backgroundColor: '#AC9EB8!important'}}>
+    <StyledBOTON>
         {children}
     </StyledBOTON>
 )
