@@ -5,3 +5,26 @@
 .cardcont{
     margin: 2em;
 }
+
+.backgroundFP{
+    background-color: #c8e1fb;
+}
+
+.FPImg{
+    width: 100%;
+    height: auto;
+}
+
+.SpotifyBkg{
+    background-color: #FE8A1B;
+}
+
+.SpotifyBkg img{
+    width: 100%;
+    height: auto;
+}
+
+.containerSubItemsTopArtist{
+    margin: auto 0;
+    display: block;
+}

@@ -1,14 +1,31 @@
 import styled from "styled-components";
 
-const StyledH3 = styled.h3`
+const StyledH2 = styled.h2`
   font-size: 1.5em;
   text-align: center;
-  color: palevioletred;
+  color: black;
+  font-family: 'Abhaya Libre', serif;
+  font-weight: 800;
+  text-transform: uppercase;
+`;
+
+const StyledH3 = styled.h3`
+  font-size: 1.2em;
+  color: black;
+  font-family: 'Abhaya Libre', serif;
+  text-transform: uppercase;
 `;
 
 const StyledInner = styled.div`
   max-width: 1200px;
   margin: 0 auto;
+`;
+
+const StyledPrecios = styled.p`
+font-family: "Open Sans", sans-serif;
+font-size: 1.5em;
+font-weight: 600;
+color: black;
 `;
 
 const StyledBOTON = styled.div`
@@ -20,6 +37,8 @@ const StyledBOTON = styled.div`
   cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
+  background-color: ${props => props.style.backgroundColor};
+  color: ${props => props.style.color};
   width: 20rem;
   text-align: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -38,4 +57,4 @@ const StyledBOTON = styled.div`
   }
 `;
 
-export { StyledH3, StyledInner, StyledBOTON };
+export { StyledH2, StyledH3, StyledInner, StyledBOTON, StyledPrecios };
