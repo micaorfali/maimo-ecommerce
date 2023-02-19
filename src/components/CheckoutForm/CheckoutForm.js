@@ -37,7 +37,7 @@ const CheckoutForm = ({ handleSubmit }) => (
                 <ErrorMessage name="email" component="span" />
                 <Field placeholder="Phone" type="text" name="phone" />
                 <ErrorMessage name="phone" component="span" />
-                <BOTON>
+                <BOTON style={{ backgroundColor: "#AC9EB8", color: "black" }}>
                     <button type="submit" disabled={isSubmitting}>
                         Submit
                     </button>

@@ -28,6 +28,13 @@ font-weight: 600;
 color: black;
 `;
 
+const StyledDetalles = styled.p`
+font-family: "Open Sans", sans-serif;
+font-size: 1em;
+font-weight: 400;
+color: black;
+`;
+
 const StyledBOTON = styled.div`
   text-align: center;
   color: black;
@@ -42,6 +49,7 @@ const StyledBOTON = styled.div`
   width: 20rem;
   text-align: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 1em;
 
   @media (max-width: 1023px) {
     font-size: 1rem;
@@ -57,4 +65,4 @@ const StyledBOTON = styled.div`
   }
 `;
 
-export { StyledH2, StyledH3, StyledInner, StyledBOTON, StyledPrecios };
+export { StyledH2, StyledH3, StyledInner, StyledBOTON, StyledPrecios, StyledDetalles };
