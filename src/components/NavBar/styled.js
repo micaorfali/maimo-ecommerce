@@ -6,22 +6,21 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #fff;
+  background-color: #AC9EB8;
 }
 
-li {
-  float: left;
- 
+.navbarContainer{
+text-align: right;
 }
 
-.primerli{
+.navbarElements{
   display: inline-block;
-  margin-left: 2em;
-  width: 4em;
 }
 
-.segundoLi{
-  margin-left: 2em;
+.logoContainer{
+  margin: 1em 2em;
+  width: 10em;
+  float: left;
 }
 
 li a {
@@ -33,7 +32,12 @@ li a {
 }
 
 li a:hover {
-  background-color: #eaea;
+  background-color: #0f1d28;
+  color: #AC9EB8;
+}
+
+li:last-child{
+  margin-right: 2em;
 }
 
 `

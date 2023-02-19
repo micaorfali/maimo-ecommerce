@@ -1,15 +1,12 @@
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Home from './pages/Home'
-import Category from './pages/Category'
-import Product from './pages/Product'
-import NavBar from './components/NavBar/NavBar';
-import { CartProvider } from './Contexts/CartContext';
-import Checkout from './pages/Checkout';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Category from "./pages/Category";
+import Product from "./pages/Product";
+import NavBar from "./components/NavBar/NavBar";
+import { CartProvider } from "./Contexts/CartContext";
+import Checkout from "./pages/Checkout";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -35,6 +32,7 @@ function App() {
             </Route>
             <Route path="*">NOT FOUND</Route>
           </Switch>
+          <Footer />
         </CartProvider>
       </Router>
     </div>

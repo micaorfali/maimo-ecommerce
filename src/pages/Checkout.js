@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Grid, Col } from "../components/Grid";
-import { H3, Inner } from "../components/Common/Common";
+import { H2, Inner } from "../components/Common/Common";
 import CheckoutForm from "../components/CheckoutForm/CheckoutForm";
 import { CartContext } from "../Contexts/CartContext";
 import CartDetail from "../components/CartDetail/CartDetail";
@@ -42,9 +42,9 @@ const Checkout = () => {
   return (
     <Inner>
       {orderCreated ? (
-        <H3>Checkout {`Order N ${orderCreated}`}</H3>
+        <H2>Checkout {`Order N ${orderCreated}`}</H2>
       ) : (
-        <H3>Checkout</H3>
+        <H2>Checkout</H2>
       )}
 
       <Grid>

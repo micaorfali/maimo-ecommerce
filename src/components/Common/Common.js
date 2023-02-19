@@ -1,7 +1,15 @@
 import React from 'react'
-import { StyledH3, StyledInner, StyledBOTON } from './styled'
+import { StyledH2, StyledInner, StyledBOTON, StyledH3, StyledPrecios, StyledDetalles } from './styled'
 
-const H3 = ({ children }) => {
+const H2 = ({ children }) => {
+    return (
+        <StyledH2>
+            {children}
+        </StyledH2>
+    )
+}
+
+const  H3 = ({ children }) => {
     return (
         <StyledH3>
             {children}
@@ -9,14 +17,33 @@ const H3 = ({ children }) => {
     )
 }
 
-const BOTON = ({ children }) => {
+const Precios = ({ children}) => {
     return (
-    <StyledBOTON>
+        <StyledPrecios>
+            {children}
+        </StyledPrecios>
+    )
+}
+
+const BOTON = ({ children, style }) => {
+    return (
+    <StyledBOTON style={style}>
         {children}
     </StyledBOTON>
 )
+    }
+
+const Detalles = ({ children }) => {
+    return (
+        <StyledDetalles>
+            {children}
+        </StyledDetalles>
+    )
 }
 
 
+
 const Inner = ({ children }) => <StyledInner>{children}</StyledInner>
-export { H3, Inner, BOTON }
+
+
+export { H2, H3, Inner, BOTON, Precios, Detalles }
