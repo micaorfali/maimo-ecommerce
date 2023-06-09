@@ -38,9 +38,9 @@ const CardContainer = ({ catId }) => {
             
             {loading ? (<p> Loading</p>) :(
             <Grid rowGap={30} colGap={30}>
-                {products.map(({ name, image, description, id }, index) =>
-                    <Col desktop={3} tablet={6} mobile={12} key={index}>
-                        <Card name={name} image={image} description={description} id={id} />
+                {products.map(({ name, image, description, id, price }, index) =>
+                    <Col desktop={4} tablet={6} mobile={12} key={index}>
+                        <Card name={name} image={image} description={description} id={id} price={price}/>
                     </Col>
                 )}
             </Grid>

@@ -1,3 +1,76 @@
 .marginproductos{
     margin: 2em;
 }
+
+.containerFilterSelector{
+    margin: 1em 3em;
+}
+
+.filter-container{
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+.filter-option{
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.TSEra{
+    background-color: #095848;
+}
+
+.Fearless{
+    background-color: #E1B469;
+}
+
+.SpeakNow{
+    background-color: #62286D;
+}
+
+.Red{
+    background-color: #830D22;
+}
+
+.Era1989{
+    background-color: #4E9AB2;
+}
+
+.Reputation{
+    background-color: #474747;
+}
+
+.Lover{
+    background-color: #DB9DC2;
+}
+
+.Folklore{
+    background-color: #888888;
+}
+
+.Evermore{
+    background-color: #D1BB9C;
+}
+
+.Midnights{
+    background-color: #133D65;
+}
+
+.selected {
+    opacity: 0.5;
+    position: relative;
+}
+
+.selected:after {
+    content: '\2714';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+}

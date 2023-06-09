@@ -6,6 +6,7 @@ const Container = styled.div`
     transition: 0.3s;
     width: 100%;
     display: inline-block;
+    border-radius: 20px;
 
   }
   
@@ -14,12 +15,12 @@ const Container = styled.div`
   }
   
   .container {
-    padding: 2px 16px;
+    padding: 0 1em 2em 1em;
   }
 
   .fotoproducto{
     height: 10rem;
-    
+    width: auto;
   }
 
   .imgcontainer{
