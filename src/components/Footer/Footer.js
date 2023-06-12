@@ -2,11 +2,10 @@ import React from "react";
 import logo from "../../imgs/TS_logo.png";
 import { Container } from "./styled";
 import { Detalles } from "../Common/Common";
-import facebook from "../../imgs/facebook.png";
 import instagram from "../../imgs/instagram.png";
-import tiktok from "../../imgs/tiktok.png";
 import twitter from "../../imgs/twitter.png";
 import youtube from "../../imgs/youtube.png";
+import argflag from "../../imgs/argflag.png";
 
 const Footer = () => {
   return (
@@ -15,47 +14,30 @@ const Footer = () => {
         <div className="container">
           <div className="TSlogo">
             <img src={logo} alt="logo taylor swift" />
+            <img src={argflag} alt="icono bandera argentina"></img>
           </div>
           <div className="followTS">
             <div>
-              <Detalles>Follow Taylor on Social Media:</Detalles>
+              <Detalles>Seguinos en redes sociales:</Detalles>
             </div>
             <div>
               <ul className="containerIconsSM">
                 <li>
                   <a
-                    href="https://www.facebook.com/TaylorSwift"
+                    href="https://www.instagram.com/tayupdatesarg_/"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={facebook} alt="Taylor's facebook page" />
+                    <img src={instagram} alt="TSA Instagram" />
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://www.instagram.com/taylorswift/"
+                    href="https://twitter.com/TayUpdatesARG"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={instagram} alt="Taylor's instagram page" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.tiktok.com/@taylorswift"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={tiktok} alt="Taylor's tiktok page" />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/taylorswift13"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={twitter} alt="Taylor's twitter page" />
+                    <img src={twitter} alt="Taylor updates Argentina Twitter" />
                   </a>
                 </li>
                 <li>

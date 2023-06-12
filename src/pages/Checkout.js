@@ -49,6 +49,13 @@ const Checkout = () => {
 
       <Grid>
         <Col desktop={6} tablet={6} mobile={12}>
+        /* detalle productos */
+       
+
+      <br/>
+
+
+        */ FORM DE CONTACTO */ 
           <CheckoutForm handleSubmit={placeOrder} />
         </Col>
         <Col desktop={6} tablet={6} mobile={12}>

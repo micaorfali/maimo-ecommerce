@@ -3,7 +3,7 @@ input{
     padding: 0.5em 0.75em;
     width: 95%;
     border-radius: 5px;
-    border: palevioletred 1px solid;
+    border: #AC9EB8 1px solid;
 }
 
 ul{
@@ -16,15 +16,6 @@ p{
     margin: 0;
 }
 
-.preciototal{
-    text-align: right;
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-hr{
-    border-top: palevioletred 2px solid;
-}
 
 button{
     font-weight: bold;

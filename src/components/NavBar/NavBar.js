@@ -3,6 +3,7 @@ import { Container } from "./styled";
 import { Link } from "react-router-dom";
 //import logo from '../../imgs/stopit-logo-02.png'
 import logo from "../../imgs/TS_logo.png";
+import argflag from "../../imgs/argflag.png";
 import { getFirestore } from "../../services/firebase";
 
 const NavBar = () => {
@@ -12,6 +13,7 @@ const NavBar = () => {
         <Link to="/">
           <li className="logoContainer">
             <img src={logo} alt="logo taylor swift" width="100%" />
+            <img src={argflag} alt="icono bandera argentina"></img>
           </li>
         </Link>
         <div className="navbarContainer">

@@ -18,10 +18,19 @@ text-align: right;
 }
 
 .logoContainer{
-  margin: 1em 2em;
-  width: 10em;
+  margin: 0.6em 2em;
+  width: 150px;
   float: left;
+  display: flex;
 }
+
+.logoContainer img{
+  align-self: center;
+}
+
+.logoContainer :nth-child(2){
+    padding-left: 1em!important;
+  }
 
 li a {
   display: block;

@@ -60,6 +60,11 @@
     background-color: #133D65;
 }
 
+.TheErasTour{
+    background: conic-gradient(from 180deg at 50% 50%, #133D65 0deg, #095848 30.44deg, #E1B469 60.98deg, #62286D 97deg, #830D22 138.25deg, #4E9AB2 185.13deg, #474747 226.74deg, #DB9DC2 268.7deg, #888888 297.12deg, #D1BB9C 325.32deg, #133D65 360deg);;
+}
+
+
 .selected {
     opacity: 0.5;
     position: relative;

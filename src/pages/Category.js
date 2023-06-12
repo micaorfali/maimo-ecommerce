@@ -10,9 +10,9 @@ const Category = () => {
 
   return (
     <div>
-      <H2>SHOP PRODUCTS</H2>
+      <H2>PRODUCTOS</H2>
       <div className="containerFilterSelector">
-        <Detalles>Click a color to filter by era</Detalles>
+        <Detalles>Elegí un color para filtrar por Era</Detalles>
         <div className="filter-container">
             <div className="filter-option TSEra"></div>
             <div className="filter-option Fearless"></div>
@@ -24,6 +24,7 @@ const Category = () => {
             <div className="filter-option Folklore"></div>
             <div className="filter-option Evermore"></div>
             <div className="filter-option Midnights"></div>
+            <div className="filter-option TheErasTour"></div>
         </div>
       </div>
 

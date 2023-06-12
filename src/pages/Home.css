@@ -28,3 +28,23 @@
     margin: auto 0;
     display: block;
 }
+
+.countdownTS{
+    background-color: #E1B469;
+}
+
+.countdownTS img{
+    width: 50vh;
+    height: auto;
+}
+
+
+.feriaSwiftie{
+    background-color: #F5D8FF;
+    padding: 2em;
+}
+
+.feriaSwiftie img{
+    width: 50vh;
+    height: auto;
+}

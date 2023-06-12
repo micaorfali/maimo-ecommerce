@@ -11,15 +11,44 @@ import { H3 } from "../components/Common/Common";
 import { Precios } from "../components/Common/Common";
 import TopArtist from "../imgs/TSTopArtist.jpg";
 import { ColContainer } from "../components/Grid/styled";
+import TSArgentina from "../imgs/TSArgentina.jpg";
+import Countdown from "../components/Countdown/Countdown";
 
 const Home = () => {
   return (
     <div>
       <Hero />
+      <div className="countdownTS">
+        <Grid>
+         <Col desktop="1"></Col> 
+          <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'left', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
+              <H3>COUNTDOWN</H3>
+              <H2>TAYLOR EN ARGENTINA</H2>
+              <Countdown/>
+          </ColContainer>
+          <Col desktop="4"></Col>
+          <Col desktop="3">
+            <img src={TSArgentina} alt="Taylor con la bandera argentina de fondo" />
+          </Col>
+        </Grid>
+      </div>
+
+      <div className="feriaSwiftie">
+        <Grid>
+          <ColContainer desktop="12" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
+              <H2>CONOCÉ NUESTRA FERIA SWIFTIE</H2>
+              <H3>Próxima fecha: 6 de agosto</H3>
+              <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
+                Más Información
+              </BOTON>
+          </ColContainer>
+        </Grid>
+      </div>
+
       <div className="backgroundFP">
         <Grid>
           <Col>
-            <H2>FEATURED PRODUCT</H2>
+            <H2>PRODUCTOS DESTACADOS</H2>
           </Col>
           <Col desktop="1"></Col>
           <Col desktop="5">
@@ -34,7 +63,7 @@ const Home = () => {
             <H3>TAYLOR SWIFT MIDNIGHTS PUZZLE</H3>
             <Precios>$35</Precios>
             <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
-              I want it!
+              Lo quiero!
             </BOTON>
           </Col>
           <Col desktop="1"></Col>
@@ -42,12 +71,12 @@ const Home = () => {
       </div>
       <div className="SpotifyBkg">
         <Grid>
-          <Col desktop="6">
+          <Col desktop="5">
             <img src={TopArtist} alt="Top Artist in Spotify 2022" />
           </Col>
-          <Col desktop="1"></Col>
+          <Col desktop="2"></Col>
           <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
-              <H2>Keep streaming Midnights in Spotify</H2>
+              <H2>SIGAN ESCUCHANDO MIDNIGHTS EN SPOTIFY</H2>
               <BOTON style={{ backgroundColor: "black", color: "white" }}>
                 Let's party
               </BOTON>

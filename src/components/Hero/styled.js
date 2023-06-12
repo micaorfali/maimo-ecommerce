@@ -21,6 +21,12 @@ const HeroContainer = styled.div`
         margin: 0.25em;
     }
 
+    p{
+        font-size: 1.5em;
+        font-family: "Open Sans", sans-serif;
+        font-weight: lighter;
+    }
+
     h1{
         font-weight: 800;
         font-size: 4em;
@@ -43,6 +49,11 @@ const HeroContainer = styled.div`
             font-size: 6em;
             
         } 
+
+        p{
+            font-size: 2em;
+        }
+
         .content{
             right: 10%;
             top: 20%; 
@@ -54,6 +65,9 @@ const HeroContainer = styled.div`
         h1, h2{
             font-size: 2em;
         } 
+        p{
+            font-size: 1em;
+        }
 
     }
 
@@ -73,6 +87,10 @@ const HeroContainer = styled.div`
         }
         h1, h2{
             font-size: 1em;
+        }
+        p{
+            max-width: 200px;
+            font-size: 0.6em;
         }
 
     }
