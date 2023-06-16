@@ -47,7 +47,7 @@ const Category = () => {
         <Detalles>Elegí un color para filtrar por Era</Detalles>
 
         <div className="filter-container">
-        {categories.length > 0 && categories.map(( {id, name, clase }) => <div key={id} className={`filter-option ${clase}`} onClick={()=>setCategoriaSeleccionada(id)} ></div>)}
+        {categories.length > 0 && categories.map(( {id, name, clase }) => <div key={id} className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`} onClick={()=>setCategoriaSeleccionada(id)} ></div>)}
         </div>
       </div>
 

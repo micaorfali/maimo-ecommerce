@@ -65,6 +65,10 @@
 }
 
 
+.seleccionada{
+    border: black 3px solid;
+}
+
 .selected {
     opacity: 0.5;
     position: relative;
