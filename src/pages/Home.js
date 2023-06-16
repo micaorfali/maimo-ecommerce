@@ -21,8 +21,8 @@ const Home = () => {
       <div className="countdownTS">
         <Grid>
          <Col desktop="1"></Col> 
-          <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'left', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
-              <H3>COUNTDOWN</H3>
+          <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'flex-start', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
+              <H3>COUNTDOWN: Primer show de</H3>
               <H2>TAYLOR EN ARGENTINA</H2>
               <Countdown/>
           </ColContainer>
@@ -35,7 +35,12 @@ const Home = () => {
 
       <div className="feriaSwiftie">
         <Grid>
-          <ColContainer desktop="12" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
+        <ColContainer desktop="4">
+          <div style={{height: '100%'}}>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13141.203128921472!2d-58.42314402849174!3d-34.57125511036719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb573dc94c8a3%3A0x2b33a22ae2f00e96!2sPlaza%20Rep%C3%BAblica%20%C3%81rabe%20de%20Egipto!5e0!3m2!1ses-419!2sar!4v1686941895265!5m2!1ses-419!2sar" width="100%" height="100%" style={{border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de la ubicacion del evento. Plaza Egipto, Palermo"></iframe>
+          </div>
+          </ColContainer>
+          <ColContainer desktop="8" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center', marginBottom: '1em'}}>
               <H2>CONOCÉ NUESTRA FERIA SWIFTIE</H2>
               <H3>Próxima fecha: 6 de agosto</H3>
               <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
