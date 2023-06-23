@@ -3,6 +3,7 @@ import HeroImg from "../../imgs/TSbanner.png";
 import { HeroContainer } from "../Hero/styled";
 import { StyledBOTON } from "../Common/styled";
 import argflag from "../../imgs/argflag.png";
+import { StyledLink } from "../Common/styled";
 
 const Hero = () => {
   return (
@@ -17,8 +18,9 @@ const Hero = () => {
         
         <h2>ARGENTINA OFICIAL</h2>
         <p>Única cuenta reconocida por Universal Music Argentina</p>
-
-        <StyledBOTON style={{backgroundColor:"#AC9EB8"}}>Ir al Shop</StyledBOTON>
+        <StyledLink to="/shop">
+          <StyledBOTON style={{backgroundColor:"#AC9EB8"}}>Ir al Shop</StyledBOTON>
+        </StyledLink>
       </div>
     </HeroContainer>
   );

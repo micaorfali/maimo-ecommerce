@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const StyledH2 = styled.h2`
   font-size: 1.5em;
@@ -51,6 +52,14 @@ const StyledTextos = styled.p`
   color: black;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
+const StyledA = styled.a`
+  text-decoration: none;
+`;
+
 const StyledBOTON = styled.div`
   text-align: center;
   color: black;
@@ -89,5 +98,7 @@ export {
   StyledPrecios,
   StyledDetalles,
   StyledProductos,
-  StyledTextos
+  StyledTextos,
+  StyledLink,
+  StyledA
 };

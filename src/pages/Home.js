@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { H2 } from "../components/Common/Common";
 import CardContainer from "../components/CardContainer/CardContainer";
@@ -13,8 +13,42 @@ import TopArtist from "../imgs/TSTopArtist.jpg";
 import { ColContainer } from "../components/Grid/styled";
 import TSArgentina from "../imgs/TSArgentina.jpg";
 import Countdown from "../components/Countdown/Countdown";
+import { StyledLink } from "../components/Common/styled";
+import { getFirestore } from "../services/firebase";
+import { doc, getDoc } from "firebase/firestore";
+
+
 
 const Home = () => {
+  const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const db = getFirestore();
+      try {
+    
+        const docRef = doc(db, "products", "MLAAnTaZtpQ8af7IKSC1");
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          console.log("Doc data:", docSnap.data());
+        } else {
+          console.log("doc doesn't exists");
+        }
+        
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <div>
       <Hero />
@@ -43,9 +77,11 @@ const Home = () => {
           <ColContainer desktop="8" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center', marginBottom: '1em'}}>
               <H2>CONOCÉ NUESTRA FERIA SWIFTIE</H2>
               <H3>Próxima fecha: 6 de agosto</H3>
-              <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
-                Más Información
-              </BOTON>
+              <a href="https://www.instagram.com/feria.swiftie/" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+                <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
+                  Más Información
+                </BOTON>
+              </a>
           </ColContainer>
         </Grid>
       </div>
@@ -67,9 +103,11 @@ const Home = () => {
           <Col desktop="4">
             <H3>TAYLOR SWIFT MIDNIGHTS PUZZLE</H3>
             <Precios>$35</Precios>
-            <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
-              Lo quiero!
-            </BOTON>
+            <StyledLink to="/product/MLAAnTaZtpQ8af7IKSC1">
+              <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
+                Lo quiero!
+              </BOTON>
+          </StyledLink>
           </Col>
           <Col desktop="1"></Col>
         </Grid>

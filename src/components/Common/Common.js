@@ -8,6 +8,8 @@ import {
   StyledDetalles,
   StyledProductos,
   StyledTextos,
+  StyledLink,
+  StyledA
 } from "./styled";
 
 const H2 = ({ children }) => {
@@ -38,6 +40,14 @@ const Textos = ({ children }) => {
   return <StyledTextos>{children}</StyledTextos>;
 };
 
+const LINK = ({ children }) => {
+  return <StyledLink>{children}</StyledLink>;
+};
+
+const A = ({ children }) => {
+  return <StyledA>{children}</StyledA>;
+};
+
 const Inner = ({ children }) => <StyledInner>{children}</StyledInner>;
 
-export { H2, H3, Inner, BOTON, Precios, Detalles, Productos, Textos };
+export { H2, H3, Inner, BOTON, Precios, Detalles, Productos, Textos, LINK, A };
