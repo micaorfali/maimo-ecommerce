@@ -15,28 +15,28 @@ import TSArgentina from "../imgs/TSArgentina.jpg";
 import Countdown from "../components/Countdown/Countdown";
 import { StyledLink } from "../components/Common/styled";
 import { getFirestore } from "../services/firebase";
-import { doc, getDoc } from "firebase/firestore";
-
 
 
 const Home = () => {
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
+  /*useEffect(() => {
     const fetchData = async () => {
       setLoading(true);
       const db = getFirestore();
       try {
     
-        const docRef = doc(db, "products", "MLAAnTaZtpQ8af7IKSC1");
-        const docSnap = await getDoc(docRef);
+        // const docRef = doc(db, "products", "MLAAnTaZtpQ8af7IKSC1");
+        // const docSnap = await getDoc(docRef);
 
-        if (docSnap.exists()) {
-          console.log("Doc data:", docSnap.data());
-        } else {
-          console.log("doc doesn't exists");
-        }
+        // if (docSnap.exists()) {
+        //   console.log("Doc data:", docSnap.data());
+        // } else {
+        //   console.log("doc doesn't exists");
+        // }
+
+
         
       } catch (error) {
         console.log(error);
@@ -46,8 +46,28 @@ const Home = () => {
     };
 
     fetchData();
-  }, []);
+  }, []);*/
 
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      const db = getFirestore();
+      try {
+        const itemsCollection = db.collection(`products`);
+        const snapshot = await itemsCollection.get();
+        const desiredId = "MLAAnTaZtpQ8af7IKSC1";
+        const filteredItem = snapshot.docs.filter(doc => doc.id === desiredId)[0];
+        setProduct(filteredItem.data());
+
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>
@@ -95,15 +115,15 @@ const Home = () => {
           <Col desktop="5">
             <img
               className="FPImg"
-              src={FeaturedProductImg}
-              alt="Featured product: midnight puzzle"
+              src={product.image}
+              alt="Featured product"
             />
           </Col>
           <Col desktop="1"></Col>
           <Col desktop="4">
-            <H3>TAYLOR SWIFT MIDNIGHTS PUZZLE</H3>
-            <Precios>$35</Precios>
-            <StyledLink to="/product/MLAAnTaZtpQ8af7IKSC1">
+            <H3>{product.name}</H3>
+            <Precios>${product.price}</Precios>
+            <StyledLink to="product/MLAAnTaZtpQ8af7IKSC1">
               <BOTON style={{ backgroundColor: "#133D65", color: "white" }}>
                 Lo quiero!
               </BOTON>
