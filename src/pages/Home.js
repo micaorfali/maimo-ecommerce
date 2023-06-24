@@ -15,6 +15,7 @@ import TSArgentina from "../imgs/TSArgentina.jpg";
 import Countdown from "../components/Countdown/Countdown";
 import { StyledLink } from "../components/Common/styled";
 import { getFirestore } from "../services/firebase";
+import Loader from "../components/Loader/Loader";
 
 
 const Home = () => {
@@ -67,7 +68,12 @@ const Home = () => {
     };
 
     fetchData();
+
   }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div>
@@ -109,7 +115,7 @@ const Home = () => {
       <div className="backgroundFP">
         <Grid>
           <Col>
-            <H2>PRODUCTOS DESTACADOS</H2>
+            <H2>PRODUCTO DESTACADO</H2>
           </Col>
           <Col desktop="1"></Col>
           <Col desktop="5">
@@ -140,16 +146,14 @@ const Home = () => {
           <Col desktop="2"></Col>
           <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
               <H2>SIGAN ESCUCHANDO MIDNIGHTS EN SPOTIFY</H2>
-              <BOTON style={{ backgroundColor: "black", color: "white" }}>
-                Let's party
-              </BOTON>
+              <a href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=MFQVOBkQShmWL9w68i1Ydg" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+                <BOTON style={{ backgroundColor: "black", color: "white" }}>
+                  Let's party
+                </BOTON>
+              </a>
           </ColContainer>
           <Col desktop="1"></Col>
         </Grid>
-      </div>
-      <H2> Productos destacados</H2>
-      <div className="cardcont">
-        <CardContainer />
       </div>
     </div>
   );

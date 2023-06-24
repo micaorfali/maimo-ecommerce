@@ -5,6 +5,7 @@ import "./Category.css";
 import { H2 } from "../components/Common/Common";
 import { Detalles } from "../components/Common/Common";
 import { getFirestore } from "../services/firebase";
+import Loader from "../components/Loader/Loader";
 
 const Category = () => {
  // const { id: catId } = useParams();
@@ -40,6 +41,18 @@ const Category = () => {
     fetchData();
   }, []);
 
+  if (loading) {
+    return <Loader />;
+  }
+
+  const handleCategoriaSeleccionada = (id) => {
+    if (categoriaSeleccionada === id) {
+      setCategoriaSeleccionada('');
+    } else {
+      setCategoriaSeleccionada(id);
+    }
+  };
+
   return (
     <div>
       <H2>PRODUCTOS</H2>
@@ -47,7 +60,12 @@ const Category = () => {
         <Detalles>Elegí un color para filtrar por Era</Detalles>
 
         <div className="filter-container">
-        {categories.length > 0 && categories.map(( {id, name, clase }) => <div key={id} className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`} onClick={()=>setCategoriaSeleccionada(id)} ></div>)}
+        {categories.length > 0 && categories.map(({ id, name, clase }) => (
+            <div
+              key={id}
+              className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`}
+              onClick={() => handleCategoriaSeleccionada(id)} ></div>
+              ))}
         </div>
       </div>
 

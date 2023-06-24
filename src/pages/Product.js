@@ -4,6 +4,7 @@ import {Product as ProductComp} from '../components/Product/Product'
 import { CartContext } from '../Contexts/CartContext'
 import { useContext } from 'react/cjs/react.development'
 import { getFirestore } from "../services/firebase";
+import Loader from '../components/Loader/Loader'
 
 
 const Product = () => {
@@ -51,7 +52,7 @@ const Product = () => {
       <div>
         {showNotification && <p>{`PRODUCT ADDED TO CART: ${showNotification}`}</p>}
         {loading ? (
-          <p>Loading...</p>
+          <Loader/>
         ) : (
           <ProductComp
             prodId={prodId}
