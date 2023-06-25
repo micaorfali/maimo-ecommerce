@@ -13,7 +13,7 @@ const CartDetail = ({ cart, getCartTotal }) => {
             <li>
               <Detalles>{name}</Detalles>
               <Detalles>
-                {quantity} x {price}
+                {quantity} x ${price}
               </Detalles>
             </li>
           </ul>
@@ -21,7 +21,7 @@ const CartDetail = ({ cart, getCartTotal }) => {
         <hr />
         <div className="flexcart">
           <p className="total">Total</p>
-          <p className="preciototal">{getCartTotal()}</p>
+          <p className="preciototal">${getCartTotal()}</p>
         </div>
       </div>
     </Container>

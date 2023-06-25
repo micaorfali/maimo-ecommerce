@@ -11,16 +11,16 @@ const CartProvider = ({ defaultValue = [], children }) => {
 
     const cartTotalItems = () => cart.length
 
-    const addToCart = ({ id, name, quantity, price }) => {
+    const addToCart = ({ id, name, quantity, price, image }) => {
         const productInCart = isInCart(id);
         if (!productInCart) {
-            setCart([...cart, { id, name, quantity, price }]);
+            setCart([...cart, { id, name, quantity, price, image }]);
         } else {
             const oldQuantity = productInCart.quantity;
             const cartWidhoutProduct = cart.filter((product) => product.id !== id);
             const finalCart = [
                 ...cartWidhoutProduct,
-                { id: id, name: name, price: price, quantity: quantity + oldQuantity },
+                { id: id, name: name, price: price, quantity: quantity + oldQuantity, image },
             ];
             setCart(finalCart);
         }

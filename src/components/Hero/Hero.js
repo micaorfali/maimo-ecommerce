@@ -4,6 +4,7 @@ import { HeroContainer } from "../Hero/styled";
 import { StyledBOTON } from "../Common/styled";
 import argflag from "../../imgs/argflag.png";
 import { StyledLink } from "../Common/styled";
+import { BOTON } from "../Common/Common";
 
 const Hero = () => {
   return (
@@ -19,7 +20,7 @@ const Hero = () => {
         <h2>ARGENTINA OFICIAL</h2>
         <p>Única cuenta reconocida por Universal Music Argentina</p>
         <StyledLink to="/shop">
-          <StyledBOTON style={{backgroundColor:"#AC9EB8"}}>Ir al Shop</StyledBOTON>
+          <BOTON style={{backgroundColor:"#AC9EB8"}}>Ir al Shop</BOTON>
         </StyledLink>
       </div>
     </HeroContainer>
