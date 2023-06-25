@@ -1,9 +1,13 @@
 input{
-    margin-bottom: 1em;
+    margin-top: 1em;
     padding: 0.5em 0.75em;
     width: 95%;
     border-radius: 5px;
     border: #AC9EB8 1px solid;
+}
+
+input:last-of-type{
+    margin-bottom: 1em;
 }
 
 ul{

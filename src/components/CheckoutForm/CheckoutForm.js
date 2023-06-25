@@ -1,8 +1,15 @@
 import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { BOTON } from "../Common/Common";
 import { H3 } from "../Common/Common";
-import { Container } from "./styled";
+import { Container, CustomButton } from "./styled";
+import styled from 'styled-components';
+
+const ErrorText = styled(ErrorMessage)`
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0;
+`;
+
 
 const CheckoutForm = ({ handleSubmit }) => (
   <Formik
@@ -32,23 +39,19 @@ const CheckoutForm = ({ handleSubmit }) => (
       }, 1000);
     }}
   >
-    {({ isSubmitting }) => (
+    {({ isValid, isSubmitting }) => (
       <Container>
         <Form id="my-form">
           <H3>Por favor, completá la información</H3>
           <Field placeholder="Nombre*" type="text" name="name" />
-          <ErrorMessage name="name" component="span" />
+          <ErrorText name="name" component="span" />
           <Field placeholder="Email*" type="email" name="email" />
-          <ErrorMessage name="email" component="span" />
+          <ErrorText name="email" component="span" />
           <Field placeholder="Telefono*" type="text" name="phone" />
-          <ErrorMessage name="phone" component="span" />
-          <BOTON class="botonComprar"
-            style={{ backgroundColor: "#AC9EB8!important", color: "black",  margin: "0 0 2em auto" }}
-          >
-            <button style={{background: "#AC9EB8", color: "black", fontFamily: "Open Sans" }} type="submit" disabled={isSubmitting}>
-              COMPRAR
-            </button>
-          </BOTON>
+          <ErrorText name="phone" component="span" />
+          <CustomButton type="submit" disabled={!isValid || isSubmitting}>
+            COMPRAR
+          </CustomButton>
         </Form>
       </Container>
     )}

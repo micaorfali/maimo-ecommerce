@@ -75,6 +75,11 @@ const StyledBOTON = styled.div`
   text-align: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   margin-top: 1em;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+  &:hover{
+    filter: brightness(110%);
+  }
 
   @media (max-width: 1023px) {
     font-size: 1rem;

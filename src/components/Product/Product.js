@@ -25,7 +25,7 @@ const Product = ({ product, addToCart }) => {
               <Textos>{product.description}</Textos>
               <BOTON style={{ backgroundColor: "#AC9EB8", color: "black" }}>
                 <div onClick={() => addToCart({ ...product, quantity: 1 })}>
-                  Add to cart
+                  Agregar al carrito
                 </div>
               </BOTON>
             </div>
