@@ -12,6 +12,8 @@ const Category = () => {
   const [categories, setCategories] = useState({});
   const [loading, setLoading] = useState(false);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
+  const [filtroHover, setFiltroHover] = useState("");
+
 
   useEffect(() =>{
   console.log(categoriaSeleccionada);
@@ -45,12 +47,13 @@ const Category = () => {
     return <Loader />;
   }
 
-  const handleCategoriaSeleccionada = (id) => {
+  const handleCategoriaSeleccionada = (id, name) => {
     if (categoriaSeleccionada === id) {
       setCategoriaSeleccionada('');
     } else {
       setCategoriaSeleccionada(id);
     }
+    setFiltroHover(name);
   };
 
   return (
@@ -64,7 +67,12 @@ const Category = () => {
             <div
               key={id}
               className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`}
-              onClick={() => handleCategoriaSeleccionada(id)} ></div>
+              onClick={() => handleCategoriaSeleccionada(id, name)}
+              onMouseEnter={() => setFiltroHover(name)}
+              onMouseLeave={() => setFiltroHover("")}
+              >
+                {filtroHover === name && <span className="filtro-hover">{name}</span>}
+              </div>
               ))}
         </div>
       </div>

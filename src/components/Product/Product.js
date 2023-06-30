@@ -8,6 +8,9 @@ import { Productos } from "../Common/Common";
 import { Textos } from "../Common/Common";
 
 const Product = ({ product, addToCart }) => {
+
+  const [count, setCount] = useState(1);
+
   return (
     <Container>
       <H2>SHOP</H2>
@@ -22,9 +25,24 @@ const Product = ({ product, addToCart }) => {
             <div className="data">
               <Productos>{product.name}</Productos>
               <Precios>${product.price}</Precios>
+
+          <div className="countContainer">
+              <button onClick={()=>  {if (count < 99 && count > 1) {
+                  setCount(count - 1);
+                }}} className='counterButton'>
+                 -
+              </button>
+              <span>{count}</span>
+              <button onClick={()=> {
+                if (count >= 1 && count < 99) {
+                  setCount(count + 1);
+                }}} className='counterButton'>
+                  +
+              </button>
+            </div>
               <Textos>{product.description}</Textos>
               <BOTON style={{ backgroundColor: "#AC9EB8", color: "black" }}>
-                <div onClick={() => addToCart({ ...product, quantity: 1 })}>
+                <div onClick={() => addToCart({ ...product, quantity: count })}>
                   Agregar al carrito
                 </div>
               </BOTON>

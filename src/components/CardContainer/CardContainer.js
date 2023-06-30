@@ -37,14 +37,18 @@ const CardContainer = ({ catId }) => {
     return (
         <Container className="contCard">
             
-            {loading ? (<Loader />) :(
+            {loading ? (<Loader />) :( 
+            <>
             <Grid rowGap={30} colGap={30}>
                 {products.map(({ name, image, description, id, price }, index) =>
                     <Col desktop={4} tablet={6} mobile={12} key={index}>
                         <Card name={name} image={image} description={description} id={id} price={price}/>
                     </Col>
                 )}
+                
             </Grid>
+            {products.length===0 && <p>No hay productos para esta categoria</p>} 
+            </>
             )}
 
         </Container>
