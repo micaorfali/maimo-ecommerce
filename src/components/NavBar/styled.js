@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+const CartIcon = styled.img`
+  width: 25px; 
+  height: auto;
+  &:hover {
+    filter: invert(66%) sepia(18%) saturate(281%) hue-rotate(229deg) brightness(95%) contrast(90%);;
+  }
+`;
+
 const Container = styled.div`
 ul {
   list-style-type: none;
@@ -10,12 +18,19 @@ ul {
 }
 
 .navbarContainer{
-text-align: right;
+display: flex;
+justify-content: flex-end;
 }
 
 .navbarElements{
-  display: inline-block;
+  display: inline-flex;
 }
+
+.navbarElements img{
+  width: 25px; 
+  height: auto;
+}
+
 
 .logoContainer{
   margin: 0.6em 2em;
@@ -51,4 +66,4 @@ li:last-child{
 
 `
 
-export { Container }
+export { Container, CartIcon }

@@ -18,7 +18,7 @@ const Countdown = () => {
 
   return (
     <CountdownContainer>
-      <div class="container">
+      <div className="container">
         {countdown >= 0 ? (
           <>
             <CountdownNumber>{Math.floor(countdown / 100)}</CountdownNumber>

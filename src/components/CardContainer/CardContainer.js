@@ -23,15 +23,19 @@ const CardContainer = ({ catId }) => {
                 const products = productsSnapshot.docs.map(doc => {
                     return { id: doc.id, ...doc.data() }
                 })
-                console.log(products);
                 setProducts(products)
                 setLoading(false)
             } catch (error) {
                 console.log('Error', error)
             }
         }
+        let isApiSuscribed = true;
+        isApiSuscribed && getProducts();
 
-        getProducts()
+        return () => {
+            isApiSuscribed = false;
+        }
+        //getProducts()
     }, [catId])
 
     return (

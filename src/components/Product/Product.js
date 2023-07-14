@@ -29,7 +29,8 @@ const Product = ({ product, addToCart }) => {
           <div className="countContainer">
               <button onClick={()=>  {if (count < 99 && count > 1) {
                   setCount(count - 1);
-                }}} className='counterButton'>
+                }}} disabled={count === 1}
+                className={`counterButton ${count === 1 ? 'disabledButton' : ''}`} >
                  -
               </button>
               <span>{count}</span>

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 import CardContainer from "../components/CardContainer/CardContainer";
 import "./Category.css";
 import { H2 } from "../components/Common/Common";
@@ -8,16 +7,12 @@ import { getFirestore } from "../services/firebase";
 import Loader from "../components/Loader/Loader";
 
 const Category = () => {
- // const { id: catId } = useParams();
+
   const [categories, setCategories] = useState({});
   const [loading, setLoading] = useState(false);
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState('');
   const [filtroHover, setFiltroHover] = useState("");
 
-
-  useEffect(() =>{
-  console.log(categoriaSeleccionada);
-  }, [categoriaSeleccionada]);
 
   useEffect(() => {
     const fetchData = async () => {

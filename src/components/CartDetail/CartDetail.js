@@ -8,8 +8,8 @@ const CartDetail = ({ cart, getCartTotal }) => {
     <Container>
       <div className="background-general">
         <H3>Precio</H3>
-        {cart.map(({ name, price, quantity }) => (
-          <ul>
+        {cart.map(({ id, name, price, quantity }) => (
+          <ul key={id}>
             <li>
               <Detalles>{name}</Detalles>
               <Detalles>

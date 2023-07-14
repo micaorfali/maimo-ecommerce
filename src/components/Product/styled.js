@@ -17,6 +17,7 @@ img{
 
 .ImgContainer{
     padding: 1em;
+    text-align: center;
 }
 
 .ImgContainer img{
@@ -42,6 +43,11 @@ span{
 
 .countContainer{
     margin: 1em 0;
+}
+
+.disabledButton {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 `

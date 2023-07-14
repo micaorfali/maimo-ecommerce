@@ -34,7 +34,7 @@
 }
 
 .countdownTS img{
-    width: 50vh;
+    max-width: 100%;
     height: auto;
 }
 

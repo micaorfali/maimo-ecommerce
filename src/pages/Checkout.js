@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Grid, Col } from "../components/Grid";
-import { BOTON, Detalles, H2, H3, Inner, Precios, Textos } from "../components/Common/Common";
+import { BOTON, H2, H3, Inner, Precios, Textos } from "../components/Common/Common";
 import CheckoutForm from "../components/CheckoutForm/CheckoutForm";
 import { CartContext } from "../Contexts/CartContext";
 import CartDetail from "../components/CartDetail/CartDetail";
@@ -12,8 +12,6 @@ import Delete from "../imgs/delete.png";
 const Checkout = () => {
   const { cart, getCartTotal, setCart, resetCart, removeItem } = useContext(CartContext);
   const [orderCreated, setOrderCreated] = useState(false);
-
-  console.log(cart);
 
   const placeOrder = async (buyerData) => {
     try {
@@ -89,8 +87,8 @@ const Checkout = () => {
               <div>
                 <hr />
                 {cart.map((product) => (
-                  <div>
-                    <div key={product.id} className="containerDetalle">
+                  <div key={product.id}>
+                    <div className="containerDetalle">
                       <Grid>
                         <Col desktop={4} tablet={6} mobile={12}>
                           <img src={product.image} alt={product.name} />

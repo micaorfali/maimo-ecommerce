@@ -1,10 +1,9 @@
-import React, { useState } from "react";
-import { Container } from "./styled";
+import React from "react";
+import { Container, CartIcon } from "./styled";
 import { Link } from "react-router-dom";
-//import logo from '../../imgs/stopit-logo-02.png'
 import logo from "../../imgs/TS_logo.png";
 import argflag from "../../imgs/argflag.png";
-import { getFirestore } from "../../services/firebase";
+import Cart from "../../imgs/ShoppingCart.svg";
 
 const NavBar = () => {
   return (
@@ -21,7 +20,9 @@ const NavBar = () => {
             <Link to="/shop"> Shop </Link>
           </li>
           <li className="navbarElements">
-            <Link to="/checkout">Cart </Link>
+            <Link to="/checkout">
+              <CartIcon src={Cart} alt="shopping cart icon"></CartIcon>
+               </Link>
           </li>
         </div>
       </ul>

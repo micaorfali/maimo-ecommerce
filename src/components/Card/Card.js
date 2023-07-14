@@ -1,6 +1,5 @@
 import React from "react";
 import { Container } from "../Card/styled";
-import FotoProducto from "../../imgs/top1.png";
 import { Link } from "react-router-dom";
 import { Productos } from "../Common/Common";
 import { Precios } from "../Common/Common";
