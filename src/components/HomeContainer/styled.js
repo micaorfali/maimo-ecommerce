@@ -1,3 +1,6 @@
+import styled from 'styled-components'
+
+const Container = styled.div`
 .hero{
     width: 100vw;
 }
@@ -47,3 +50,7 @@
     width: 50vh;
     height: auto;
 }
+
+`
+
+export { Container}

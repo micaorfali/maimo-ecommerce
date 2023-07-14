@@ -29,7 +29,7 @@ const Countdown = () => {
             <p className="dias">DÍAS</p>
           </>
         ) : (
-          <span>El evento ha pasado</span>
+          <span>El evento ha terminado</span>
         )}
       </div>
     </CountdownContainer>

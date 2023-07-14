@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 const CountdownContainer = styled.div`
 .container{
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 6vw;
   font-weight: bold;
   font-family: "Abhaya Libre", serif;
   font-weight: 800;
 }
 
 .container p{
-    font-size: 0.5em;
+    font-size: 2vw;
 }
   
 `;
@@ -28,7 +28,7 @@ const CountdownNumber = styled.div`
   margin: 5px;
 
   .dias{
-    font-size: 1em;
+    font-size: 2vw;
   }
 `;
 

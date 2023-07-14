@@ -33,8 +33,8 @@ justify-content: flex-end;
 
 
 .logoContainer{
-  margin: 0.6em 2em;
-  width: 150px;
+  margin: 0.8em 2em;
+  width: 13em;
   float: left;
   display: flex;
 }
@@ -43,8 +43,13 @@ justify-content: flex-end;
   align-self: center;
 }
 
+.logoContainer :first-child{
+  width: 9em;
+}
+
 .logoContainer :nth-child(2){
     padding-left: 1em!important;
+   
   }
 
 li a {
@@ -64,6 +69,21 @@ li:last-child{
   margin-right: 2em;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .logoContainer{
+  width: 30vw;
+}
+
+.logoContainer :first-child{
+  width: 25vw;
+}
+
+.logoContainer :nth-child(2){
+    padding-left: 1vw!important;
+    width: 10vw;
+  }
+}
 `
 
 export { Container, CartIcon }

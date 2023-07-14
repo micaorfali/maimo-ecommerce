@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+const Container = styled.div`
 input{
     margin-top: 1em;
     padding: 0.5em 0.75em;
@@ -20,9 +23,15 @@ p{
     margin: 0;
 }
 
-
 button{
     font-weight: bold;
     border: none;
     font-size: 1.1em;
 }
+
+.containerDetalle img{
+    width: 100%;
+}
+`
+
+export {Container}

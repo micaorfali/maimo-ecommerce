@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const HeroContent = styled.div`
 position: absolute;
-  top: 30%;
+  top: 20%;
   right: 15%;
   color: white;
 `;
@@ -29,6 +29,8 @@ const HeroContainer = styled.div`
         font-size: 2vw;
         font-family: "Open Sans", sans-serif;
         font-weight: lighter;
+        max-width: 75%;
+        margin: 0 auto; 
     }
 
     h1{
@@ -50,12 +52,16 @@ const HeroContainer = styled.div`
     @media only screen and (max-width: 768px) {
         .content{
             top: 10%;
-            right: 10%
+            right: 10%;
             position: relative;
         }
 
+        .content img{
+            width: 8vw;
+        }
+
         p{
-            font-size: 1.5vw;
+            font-size: 1.8vw;
         }
     }
 
@@ -65,12 +71,8 @@ const HeroContainer = styled.div`
             right: 10%;
             position: relative;
         }
-        h1, h2{
-            font-size: 1vw;
-        }
-        p{
-            max-width: 200px;
-            font-size: 0.6vw;
+        .content img{
+            width: 5vw;
         }
     }
 
