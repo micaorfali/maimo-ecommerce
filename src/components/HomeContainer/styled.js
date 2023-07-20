@@ -1,3 +1,6 @@
+import styled from 'styled-components'
+
+const Container = styled.div`
 .hero{
     width: 100vw;
 }
@@ -28,3 +31,26 @@
     margin: auto 0;
     display: block;
 }
+
+.countdownTS{
+    background-color: #E1B469;
+}
+
+.countdownTS img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.feriaSwiftie{
+    background-color: #F5D8FF;
+}
+
+.feriaSwiftie img{
+    width: 50vh;
+    height: auto;
+}
+
+`
+
+export { Container}

@@ -14,14 +14,20 @@ const Container = styled.div`
   }
 
   .TSlogo {
-    width: 10rem;
-    display: inline-block;
+    width: 155px;
+    height: auto;
+    display: flex;
     padding-right: 2em;
   }
 
   .TSlogo img {
     width: 100%;
     height: auto;
+    align-self: center;
+  }
+
+  .TSlogo :nth-child(2){
+    padding-left: 1em;
   }
 
   .containerIconsSM {

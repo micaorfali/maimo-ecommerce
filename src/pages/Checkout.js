@@ -1,62 +1,11 @@
-import React, { useState, useContext } from "react";
-import { Grid, Col } from "../components/Grid";
-import { H2, Inner } from "../components/Common/Common";
-import CheckoutForm from "../components/CheckoutForm/CheckoutForm";
-import { CartContext } from "../Contexts/CartContext";
-import CartDetail from "../components/CartDetail/CartDetail";
-import { getFirestore, getDate } from "../services/firebase";
-import './Checkout.css'
+import React from "react";
+import CheckoutContainer from "../components/CheckoutContainer/CheckoutContainer";
 
 const Checkout = () => {
-  const { cart, getCartTotal, setCart } = useContext(CartContext);
-  const [orderCreated, setOrderCreated] = useState(false);
-
-  console.log(cart);
-
-  const placeOrder = async (buyerData) => {
-
-    try {
-      const db = getFirestore();
-      console.log(`order N ${buyerData.name}`);
-
-      const cartItems = cart.map(({ id, name, price, quantity }) => {
-        return { id, name, price, quantity };
-      });
-
-      console.log(cartItems)
-
-      const order = {
-        buyer: buyerData,
-        items: cartItems,
-        date: getDate(),
-        total: getCartTotal(),
-      };
-
-      const res = await db.collection("orders").add(order);
-      setCart([]);
-      setOrderCreated(res.id);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  return (
-    <Inner>
-      {orderCreated ? (
-        <H2>Checkout {`Order N ${orderCreated}`}</H2>
-      ) : (
-        <H2>Checkout</H2>
-      )}
-
-      <Grid>
-        <Col desktop={6} tablet={6} mobile={12}>
-          <CheckoutForm handleSubmit={placeOrder} />
-        </Col>
-        <Col desktop={6} tablet={6} mobile={12}>
-          <CartDetail cart={cart} getCartTotal={getCartTotal} />
-        </Col>
-      </Grid>
-    </Inner>
-  );
+  return(
+     <CheckoutContainer/>
+  )
+ 
 };
 
 export default Checkout;

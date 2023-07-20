@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 
+const CartIcon = styled.img`
+  width: 25px; 
+  height: auto;
+  &:hover {
+    filter: invert(66%) sepia(18%) saturate(281%) hue-rotate(229deg) brightness(95%) contrast(90%);;
+  }
+`;
+
 const Container = styled.div`
 ul {
   list-style-type: none;
@@ -10,18 +18,39 @@ ul {
 }
 
 .navbarContainer{
-text-align: right;
+display: flex;
+justify-content: flex-end;
 }
 
 .navbarElements{
-  display: inline-block;
+  display: inline-flex;
 }
 
-.logoContainer{
-  margin: 1em 2em;
-  width: 10em;
-  float: left;
+.navbarElements img{
+  width: 25px; 
+  height: auto;
 }
+
+
+.logoContainer{
+  margin: 0.8em 2em;
+  width: 13em;
+  float: left;
+  display: flex;
+}
+
+.logoContainer img{
+  align-self: center;
+}
+
+.logoContainer :first-child{
+  width: 9em;
+}
+
+.logoContainer :nth-child(2){
+    padding-left: 1em!important;
+   
+  }
 
 li a {
   display: block;
@@ -40,6 +69,21 @@ li:last-child{
   margin-right: 2em;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .logoContainer{
+  width: 30vw;
+}
+
+.logoContainer :first-child{
+  width: 25vw;
+}
+
+.logoContainer :nth-child(2){
+    padding-left: 1vw!important;
+    width: 10vw;
+  }
+}
 `
 
-export { Container }
+export { Container, CartIcon }

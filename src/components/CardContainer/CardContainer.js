@@ -3,7 +3,7 @@ import Card from '../Card/Card'
 import { Container } from '../CardContainer/styled'
 import { Grid, Col } from '../Grid'
 import { getFirestore } from '../../services/firebase'
-
+import Loader from '../Loader/Loader'
 
 const CardContainer = ({ catId }) => {
     const [products, setProducts] = useState([])
@@ -29,21 +29,30 @@ const CardContainer = ({ catId }) => {
                 console.log('Error', error)
             }
         }
+        let isApiSuscribed = true;
+        isApiSuscribed && getProducts();
 
-        getProducts()
+        return () => {
+            isApiSuscribed = false;
+        }
+        //getProducts()
     }, [catId])
 
     return (
         <Container className="contCard">
             
-            {loading ? (<p> Loading</p>) :(
+            {loading ? (<Loader />) :( 
+            <>
             <Grid rowGap={30} colGap={30}>
-                {products.map(({ name, image, description, id }, index) =>
-                    <Col desktop={3} tablet={6} mobile={12} key={index}>
-                        <Card name={name} image={image} description={description} id={id} />
+                {products.map(({ name, image, description, id, price }, index) =>
+                    <Col desktop={4} tablet={6} mobile={12} key={index}>
+                        <Card name={name} image={image} description={description} id={id} price={price}/>
                     </Col>
                 )}
+                
             </Grid>
+            {products.length===0 && <p>No hay productos para esta categoria</p>} 
+            </>
             )}
 
         </Container>

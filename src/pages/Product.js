@@ -4,6 +4,8 @@ import {Product as ProductComp} from '../components/Product/Product'
 import { CartContext } from '../Contexts/CartContext'
 import { useContext } from 'react/cjs/react.development'
 import { getFirestore } from "../services/firebase";
+import Loader from '../components/Loader/Loader'
+import checkicon from "../imgs/checkicon.png";
 
 
 const Product = () => {
@@ -49,9 +51,13 @@ const Product = () => {
   
     return (
       <div>
-        {showNotification && <p>{`PRODUCT ADDED TO CART: ${showNotification}`}</p>}
+        {showNotification && 
+        <div style={{backgroundColor: "#C9ECC3", margin: "1em 2em", padding: "1em 2em"}}>
+            <img src={checkicon} alt="icono Check" style={{width: "20px", height: "auto", marginRight: "10px"}}></img>
+            {`PRODUCTO AGREGADO AL CARRITO: ${showNotification}`}
+          </div>}
         {loading ? (
-          <p>Loading...</p>
+          <Loader/>
         ) : (
           <ProductComp
             prodId={prodId}

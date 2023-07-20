@@ -1,15 +1,10 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-import CardContainer from '../components/CardContainer/CardContainer';
-import './Category.css'
+import React from "react";
+
+import CategoryContainer from "../components/CategoryContainer/CategoryContainer";
 
 const Category = () => {
-    const { id: catId } = useParams();
-
-    return (
-        <div  className="marginproductos">
-            <CardContainer catId={catId || null} />
-        </div>
-    )
-}
-export default Category
+  return(
+    <CategoryContainer/>
+  )
+};
+export default Category;
