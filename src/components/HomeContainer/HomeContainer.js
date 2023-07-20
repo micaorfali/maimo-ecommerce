@@ -4,7 +4,7 @@ import { Grid } from "../Grid";
 import { Col } from "../Grid";
 import TopArtist from "../../imgs/TSTopArtist.jpg";
 import { ColContainer } from "../Grid/styled";
-import TSArgentina from "../../imgs/tscloseup.png";
+import TSArgentina from "../../imgs/tscloseup1.png";
 import Countdown from "../Countdown/Countdown";
 import { StyledLink } from "../Common/styled";
 import { getFirestore } from "../../services/firebase";
@@ -76,15 +76,15 @@ const HomeContainer = () => {
       <Container>
       <div className="countdownTS">
         <Grid>
-         <Col desktop="2"></Col> 
-          <ColContainer desktop="4" style={{ display: 'flex', alignItems: 'flex-start', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
+         <Col desktop="2" tablet="1" mobile="1"></Col> 
+          <ColContainer desktop="4" tablet="5" mobile="7" style={{ display: 'flex', alignItems: 'flex-start', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
               <H3>COUNTDOWN: Primer show de</H3>
               <H2>TAYLOR EN ARGENTINA</H2>
               <Countdown/>
           </ColContainer>
-          <Col desktop="2"></Col>
-          <Col desktop="4">
-              <img src={TSArgentina} alt="Taylor con la bandera argentina de fondo" />
+          <Col desktop="2" tablet="1" mobile="0"></Col>
+          <Col desktop="4" tablet="5" mobile="3">
+              <img src={TSArgentina} alt="Taylor con el Body de Argentina" />
           </Col>
         </Grid>
       </div>
