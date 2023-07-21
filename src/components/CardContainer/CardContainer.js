@@ -59,4 +59,4 @@ const CardContainer = ({ catId }) => {
     )
 }
 
-export default CardContainer
+export default CardContainer;
