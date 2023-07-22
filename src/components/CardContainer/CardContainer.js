@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import Card from '../Card/Card'
-import { Container } from '../CardContainer/styled'
-import { Grid, Col } from '../Grid'
-import { getFirestore } from '../../services/firebase'
-import Loader from '../Loader/Loader'
+import React, { useEffect, useState } from 'react';
+import Card from '../Card/Card';
+import { Container } from './styled';
+import { Grid, Col } from '../Grid';
+import { getFirestore } from '../../services/firebase';
+import Loader from '../Loader/Loader';
 
 const CardContainer = ({ catId }) => {
     const [products, setProducts] = useState([])
@@ -39,7 +39,8 @@ const CardContainer = ({ catId }) => {
     }, [catId])
 
     return (
-        <Container className="contCard">
+        <Container>
+            <div  className="contCard">
             
             {loading ? (<Loader />) :( 
             <>
@@ -54,7 +55,7 @@ const CardContainer = ({ catId }) => {
             {products.length===0 && <p>No hay productos para esta categoria</p>} 
             </>
             )}
-
+               </div>
         </Container>
     )
 }

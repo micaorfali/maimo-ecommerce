@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { Box } from "./styled";
 import CardContainer from "../CardContainer/CardContainer";
 import { H2 } from "../Common/Common";
 import { Detalles } from "../Common/Common";
 import { getFirestore } from "../../services/firebase";
 import Loader from "../Loader/Loader";
-import { Container } from "./styled";
+import "./estiloCategory.css"
+
 
 const CategoryContainer = () => {
 
@@ -52,32 +54,33 @@ const CategoryContainer = () => {
   };
 
   return (
-    <div>
-    <Container>
-      <H2>PRODUCTOS</H2>
-      <div className="containerFilterSelector">
-        <Detalles>Elegí un color para filtrar por Era</Detalles>
+    
+      <Box>
+        <H2>PRODUCTOS</H2>
+        <div className="containerFilterSelector">
+          <Detalles>Elegí un color para filtrar por Era</Detalles>
 
-        <div className="filter-container">
-        {categories.length > 0 && categories.map(({ id, name, clase }) => (
-            <div
-              key={id}
-              className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`}
-              onClick={() => handleCategoriaSeleccionada(id, name)}
-              onMouseEnter={() => setFiltroHover(name)}
-              onMouseLeave={() => setFiltroHover("")}
-              >
-                {filtroHover === name && <span className="filtro-hover">{name}</span>}
-              </div>
-              ))}
+          <div className="filter-container">
+          {categories.length > 0 && categories.map(({ id, name, clase }) => (
+              <div
+                key={id}
+                className={`filter-option ${clase} ${id === categoriaSeleccionada ? 'seleccionada' : ''}`}
+                onClick={() => handleCategoriaSeleccionada(id, name)}
+                onMouseEnter={() => setFiltroHover(name)}
+                onMouseLeave={() => setFiltroHover("")}
+                >
+                  {filtroHover === name && <span className="filtro-hover">{name}</span>}
+                </div>
+                ))}
+          </div>
         </div>
-      </div>
 
-      <div className="marginproductos">
-        <CardContainer catId={categoriaSeleccionada || null} />
-      </div>
-    </Container>
-    </div>
+        <div className="marginproductos">
+          <CardContainer catId={categoriaSeleccionada || null} />
+        </div>
+      </Box>
+    
   );
 };
+
 export default CategoryContainer;
