@@ -73,7 +73,7 @@ const CheckoutContainer = () => {
         <div>
           <H2>CARRITO de COMPRAS</H2>
           <Grid>
-        <Col desktop={6} tablet={6} mobile={12}>
+        <Col desktop={6} tablet={10} mobile={12}>
           {/* Verificar si el carrito está vacío */}
           {cart.length === 0 ? (
             <div style={{height: "100vh"}}>
@@ -91,13 +91,13 @@ const CheckoutContainer = () => {
                   <div key={product.id}>
                     <div className="containerDetalle">
                       <Grid>
-                        <Col desktop={4} tablet={6} mobile={12}>
+                        <Col desktop={4} tablet={6} mobile={6}>
                           <img src={product.image} alt={product.name} />
                         </Col>
-                        <Col desktop={6} tablet={6} mobile={12}>
+                        <Col desktop={6} tablet={4} mobile={4}>
                           <H3>{product.name}</H3>
                         </Col>
-                        <Col desktop={2} tablet={6} mobile={12}>
+                        <Col desktop={2} tablet={2} mobile={1}>
                           <div style={{ marginTop: "1em" }}>
                             <Precios>${product.price}</Precios>
                           </div>

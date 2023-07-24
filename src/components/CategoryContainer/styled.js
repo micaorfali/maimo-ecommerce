@@ -119,6 +119,20 @@ const Box = styled.div`
         width: 100%;
     }
 
+    @media (max-width: 426px) {
+        .containerFilterSelector{
+            margin: 1em!important;
+        }
+
+        .filter-option{
+            border-radius: 30%;
+        }
+
+        .contCard{
+            margin: 0;
+        }
+    }
+
 `
 
 export { Box }

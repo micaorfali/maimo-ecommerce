@@ -24,7 +24,7 @@ const Container = styled.div`
 
 .SpotifyBkg img{
     width: 100%;
-    height: auto;
+    height: 100%;
 }
 
 .containerSubItemsTopArtist{
@@ -49,6 +49,10 @@ const Container = styled.div`
 .feriaSwiftie img{
     width: 50vh;
     height: auto;
+}
+
+@media (max-width: 426px) {
+    text-align: center;
 }
 
 `

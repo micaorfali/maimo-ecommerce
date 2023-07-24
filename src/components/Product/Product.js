@@ -22,7 +22,7 @@ const Product = ({ product, addToCart }) => {
             </div>
           </Col>
           <Col desktop={5} tablet={5} mobile={12}>
-            <div className="data">
+            <div className="data" style={{marginBottom: '2em'}}>
               <Productos>{product.name}</Productos>
               <Precios>${product.price}</Precios>
 

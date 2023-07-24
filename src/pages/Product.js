@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import React, {useState, useEffect} from "react"
+import { useParams } from "react-router-dom"
 import {Product as ProductComp} from '../components/Product/Product'
 import { CartContext } from '../Contexts/CartContext'
 import { useContext } from 'react/cjs/react.development'
