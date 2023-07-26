@@ -5,7 +5,6 @@ import { H2 } from "../Common/Common";
 import { Detalles } from "../Common/Common";
 import { getFirestore } from "../../services/firebase";
 import Loader from "../Loader/Loader";
-import "./estiloCategory.css"
 
 
 const CategoryContainer = () => {

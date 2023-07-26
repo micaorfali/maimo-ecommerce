@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Box = styled.div`
     .marginproductos{
@@ -96,15 +96,6 @@ const Box = styled.div`
         position: relative;
     }
 
-    .selected:after {
-        content: '\2714';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 24px;
-    }
 
     .containerDetalle{
         display: flex;
@@ -129,7 +120,7 @@ const Box = styled.div`
         }
 
         .contCard{
-            margin: 0;
+            margin: 0!important;
         }
     }
 

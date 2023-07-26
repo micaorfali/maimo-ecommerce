@@ -114,8 +114,7 @@ const CheckoutContainer = () => {
               </div>
             
 
-          {/* FORM DE CONTACTO */}
-          <CheckoutForm handleSubmit={placeOrder} />
+          
           </div>
           )}
           
@@ -125,6 +124,9 @@ const CheckoutContainer = () => {
           <CartDetail cart={cart} getCartTotal={getCartTotal} />
         </Col>
       </Grid>
+
+      {/* FORM DE CONTACTO */}
+      <CheckoutForm handleSubmit={placeOrder} />
         </div>
       )}
 

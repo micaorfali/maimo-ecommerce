@@ -18,11 +18,15 @@ img{
 .ImgContainer{
     padding: 1em;
     text-align: center;
+    height: auto;
+    width: auto;
 }
 
 .ImgContainer img{
-    height: 80vh; 
-    width: auto;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
 }
 
 
@@ -49,6 +53,18 @@ span{
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* @media (max-width: 768px){
+    .ImgContainer{
+    height: 30vh;
+    width: auto;
+}
+
+.ImgContainer img{
+    max-width: 100%;
+    height: auto;
+}
+} */
 
 `
 

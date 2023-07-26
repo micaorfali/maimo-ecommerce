@@ -33,7 +33,7 @@ const Container = styled.div`
 }
 
 .countdownTS{
-    background-color: #E1B469;
+    background-color: rgba(225, 180, 105, 0.5);
 }
 
 .countdownTS img{

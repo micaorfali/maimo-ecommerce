@@ -5,6 +5,11 @@ position: absolute;
   top: 20%;
   right: 15%;
   color: white;
+
+  @media (max-width: 426px){
+    top: 15%;
+    right: 10%;
+  }
 `;
 
 const HeroContainer = styled.div`

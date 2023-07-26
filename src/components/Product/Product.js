@@ -16,12 +16,12 @@ const Product = ({ product, addToCart }) => {
       <H2>SHOP</H2>
       <div className="container">
         <Grid>
-          <Col desktop={5} tablet={5} mobile={12}>
+          <Col desktop={6} tablet={6} mobile={12}>
             <div className="ImgContainer">
               <img src={product.image} alt={product.name}></img>
             </div>
           </Col>
-          <Col desktop={5} tablet={5} mobile={12}>
+          <Col desktop={6} tablet={6} mobile={12}>
             <div className="data" style={{marginBottom: '2em'}}>
               <Productos>{product.name}</Productos>
               <Precios>${product.price}</Precios>

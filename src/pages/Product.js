@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 import {Product as ProductComp} from '../components/Product/Product'
-import { CartContext } from '../Contexts/CartContext'
+import { CartContext, useCartContext } from '../Contexts/CartContext'
 import { useContext } from 'react/cjs/react.development'
 import { getFirestore } from "../services/firebase";
 import Loader from '../components/Loader/Loader'
@@ -12,7 +12,7 @@ const Product = () => {
 
     const { id: prodId } = useParams();
 
-    const { addToCart } = useContext(CartContext)
+    const { addToCart } = useCartContext();
     const [product, setProduct] = useState({});
     const [loading, setLoading] = useState(false);
     const [showNotification, setShowNotification] = useState(false);
