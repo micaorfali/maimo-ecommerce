@@ -19,7 +19,7 @@ const Container = styled.div`
 }
 
 .SpotifyBkg{
-    background-color: #FE8A1B;
+    background-color: #C6F3B4;
 }
 
 .SpotifyBkg img{
@@ -38,13 +38,9 @@ const Container = styled.div`
 
 .countdownTS img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-
-.feriaSwiftie{
-    background-color: #F5D8FF;
-}
 
 .feriaSwiftie img{
     width: 50vh;

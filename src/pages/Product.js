@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react"
 import { useParams } from "react-router-dom"
 import {Product as ProductComp} from '../components/Product/Product'
-import { CartContext, useCartContext } from '../Contexts/CartContext'
-import { useContext } from 'react/cjs/react.development'
+import { useCartContext } from '../Contexts/CartContext'
 import { getFirestore } from "../services/firebase";
 import Loader from '../components/Loader/Loader'
 import checkicon from "../imgs/checkicon.png";

@@ -11,6 +11,8 @@ import { getFirestore } from "../../services/firebase";
 import Loader from "../Loader/Loader";
 import { BOTON, H2, H3, Precios } from "../Common/Common";
 import { Container } from "./styled";
+import bejeweled from "../../imgs/bejeweled.png"
+import glitterrosa from "../../imgs/glitterrosa.jpg"
 
 
 const HomeContainer = () => {
@@ -78,18 +80,20 @@ const HomeContainer = () => {
         <Grid>
          <Col desktop="2" tablet="1" mobile="1"></Col> 
           <ColContainer desktop="4" tablet="5" mobile="5" style={{ display: 'flex', alignItems: 'flex-start', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
-              <H3>COUNTDOWN: Primer show de</H3>
+              <H3>COUNTDOWN</H3>
               <H2>TAYLOR EN ARGENTINA</H2>
               <Countdown/>
           </ColContainer>
           <Col desktop="2" tablet="1" mobile="null"></Col>
           <Col desktop="4" tablet="5" mobile="5">
+            <div style={{height: "40vh"}}>
               <img src={TSArgentina} alt="Taylor con el Body de Argentina" />
+            </div>
           </Col>
         </Grid>
       </div>
 
-      <div className="feriaSwiftie">
+      <div style={{ backgroundImage: `url(${glitterrosa})` }}>
         <Grid>
         <ColContainer desktop="4" tablet="4">
           <div style={{height: '100%'}}>
@@ -141,16 +145,18 @@ const HomeContainer = () => {
       <div className="SpotifyBkg">
         <Grid>
           <Col desktop="5" tablet="5">
-            <img src={TopArtist} alt="Top Artist in Spotify 2022" />
+            <img src={bejeweled} alt="Top Artist in Spotify 2022" />
           </Col>
           <Col desktop="2" tablet="2"></Col>
           <ColContainer desktop="4" tablet="4" style={{ display: 'flex', alignItems: 'center', height: '100%', flexDirection: 'column', justifyContent: 'center'}}>
-              <H2>SIGAN ESCUCHANDO MIDNIGHTS EN SPOTIFY</H2>
-              <a href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=MFQVOBkQShmWL9w68i1Ydg" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
-                <BOTON style={{ backgroundColor: "black", color: "white" }}>
-                  Let's party
-                </BOTON>
-              </a>
+            <div style={{margin: "0 1em"}}>
+                <H2>SEGUÍ ESCUCHANDO MIDNIGHTS EN SPOTIFY</H2>
+                <a href="https://open.spotify.com/album/151w1FgRZfnKZA9FEcg9Z3?si=MFQVOBkQShmWL9w68i1Ydg" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+                  <BOTON style={{ backgroundColor: "black", color: "white" }}>
+                    Let's party
+                  </BOTON>
+                </a>
+              </div>
           </ColContainer>
           <Col desktop="1" tablet="1"></Col>
         </Grid>
