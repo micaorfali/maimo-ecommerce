@@ -5,6 +5,20 @@ position: absolute;
   top: 20%;
   right: 15%;
   color: white;
+
+
+  @media (max-width: 769px){
+    top: 15%;
+    right: 10%;
+  }
+
+  @media (max-width: 426px){
+    /* top: 15%;
+    right: 10%; */
+    p{
+        display: none;
+    }
+  } 
 `;
 
 const HeroContainer = styled.div`
@@ -18,15 +32,20 @@ const HeroContainer = styled.div`
     font-family: 'Abhaya Libre', serif;
         text-align:center;
         color: white;
+        max-width: 50vw;
+    }
+
+    .content img{
+        padding-right: 0.5em;
     }
 
     h1, h2 {
         position: relative;
-        margin: 0.25em;
+        margin: 0.25em 0;
     }
 
     p{
-        font-size: 2vw;
+        font-size: 1.2vw;
         font-family: "Open Sans", sans-serif;
         font-weight: lighter;
         max-width: 75%;
@@ -40,7 +59,12 @@ const HeroContainer = styled.div`
 
     h2{
         font-weight: 500;
-        font-size: 3.5vw;
+        font-size: 3vw;
+    }
+
+    h3{
+        font-weight: 500;
+        font-size: 2vw;
     }
 
     hr{
@@ -61,7 +85,13 @@ const HeroContainer = styled.div`
         }
 
         p{
-            font-size: 1.8vw;
+            font-size: 1vw;
+        }
+    }
+
+    @media only screen and (max-width: 769px){
+        .content{
+            right: 0;
         }
     }
 

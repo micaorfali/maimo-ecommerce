@@ -17,7 +17,7 @@ const Footer = () => {
             <img src={argflag} alt="icono bandera argentina"></img>
           </div>
           <div className="followTS">
-            <div>
+            <div className="seguinos">
               <Detalles>Seguinos en redes sociales:</Detalles>
             </div>
             <div>

@@ -73,10 +73,10 @@ const CheckoutContainer = () => {
         <div>
           <H2>CARRITO de COMPRAS</H2>
           <Grid>
-        <Col desktop={6} tablet={6} mobile={12}>
+        <Col desktop={6} tablet={10} mobile={12}>
           {/* Verificar si el carrito está vacío */}
           {cart.length === 0 ? (
-            <div style={{height: "100vh"}}>
+            <div style={{height: "20vh", marginLeft: "1em"}}>
               <p>No hay productos en el carrito</p>
               <StyledLink to="/shop">
                 <BOTON style={{ backgroundColor: "#AC9EB8" }}>Ir al Shop</BOTON>
@@ -91,13 +91,13 @@ const CheckoutContainer = () => {
                   <div key={product.id}>
                     <div className="containerDetalle">
                       <Grid>
-                        <Col desktop={4} tablet={6} mobile={12}>
+                        <Col desktop={4} tablet={6} mobile={6}>
                           <img src={product.image} alt={product.name} />
                         </Col>
-                        <Col desktop={6} tablet={6} mobile={12}>
+                        <Col desktop={6} tablet={4} mobile={4}>
                           <H3>{product.name}</H3>
                         </Col>
-                        <Col desktop={2} tablet={6} mobile={12}>
+                        <Col desktop={2} tablet={2} mobile={1}>
                           <div style={{ marginTop: "1em" }}>
                             <Precios>${product.price}</Precios>
                           </div>
@@ -114,17 +114,21 @@ const CheckoutContainer = () => {
               </div>
             
 
-          {/* FORM DE CONTACTO */}
-          <CheckoutForm handleSubmit={placeOrder} />
+          
           </div>
           )}
           
         </Col>
         <Col desktop={6} tablet={12} mobile={12}>
-          <div style={{textAlign: "right", textDecoration: "underline", marginBottom: "1em", cursor: "pointer"}} onClick={handleVaciarCarrito}>Vaciar carrito</div>
+          <div style={{textAlign: "right", textDecoration: "underline", marginRight: "1em", marginBottom: "1em", cursor: "pointer"}} onClick={handleVaciarCarrito}>Vaciar carrito</div>
           <CartDetail cart={cart} getCartTotal={getCartTotal} />
         </Col>
       </Grid>
+
+      {/* FORM DE CONTACTO */}
+      <div style={{margin: "1em"}}>
+        <CheckoutForm handleSubmit={placeOrder} />
+      </div>
         </div>
       )}
 

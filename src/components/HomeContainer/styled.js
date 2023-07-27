@@ -19,12 +19,13 @@ const Container = styled.div`
 }
 
 .SpotifyBkg{
-    background-color: #FE8A1B;
+    background-color: #C6F3B4;
 }
 
 .SpotifyBkg img{
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 .containerSubItemsTopArtist{
@@ -33,22 +34,30 @@ const Container = styled.div`
 }
 
 .countdownTS{
-    background-color: #E1B469;
+    background-color: rgba(225, 180, 105, 0.5);
 }
 
 .countdownTS img{
     max-width: 100%;
-    height: auto;
+    height: 100%;
 }
 
-
-.feriaSwiftie{
-    background-color: #F5D8FF;
-}
 
 .feriaSwiftie img{
     width: 50vh;
     height: auto;
+}
+
+.diamond{
+    width: 100%;
+}
+
+@media (max-width: 426px) {
+    text-align: center;
+
+    .mapa{
+        display: none;
+    }
 }
 
 `

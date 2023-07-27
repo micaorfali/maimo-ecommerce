@@ -64,5 +64,19 @@ const Container = styled.div`
   .copyright{
     padding: 1em 3em;
   }
+
+  @media (max-width: 426px) {
+    .container {
+    padding: 1em;
+    }
+
+    .TSlogo :nth-child(2){
+    padding-left: 0.25em;
+    }
+
+    .seguinos{
+      display: none;
+    }
+
 `;
 export { Container };

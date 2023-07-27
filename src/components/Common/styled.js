@@ -89,9 +89,8 @@ const StyledBOTON = styled.div`
   }
   @media (max-width: 424px) {
     font-size: 0.75rem;
-    width: 5rem;
+    width: 7rem;
     border-radius: 5px;
-    padding: 0.25rem;
   }
 `;
 

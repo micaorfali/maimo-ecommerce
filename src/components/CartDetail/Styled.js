@@ -12,6 +12,7 @@ const Container = styled.div`
     box-shadow: 2px 4px 6px 5px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     padding: 1em 2em;
+    margin: 1em 1em 2em 1em;
   }
 
   .background-general H3{
@@ -40,6 +41,8 @@ const Container = styled.div`
 
   .hr{
     border: 4px solid #000000;
+  }
+
   }
 
 `;
