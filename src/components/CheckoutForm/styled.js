@@ -10,7 +10,7 @@ const CustomButton = styled.button`
   background-color: ${(props) => (props.disabled ? '#BABABA' : '#AC9EB8')};
   color: black;
   padding: 1rem;
-  margin: 1em 0 1em auto;
+  margin: 1em 1em 1em auto;
   border-radius: 20px;
   font-size: 1.5rem;
   width: 20rem;

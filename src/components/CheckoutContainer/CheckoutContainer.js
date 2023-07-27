@@ -76,7 +76,7 @@ const CheckoutContainer = () => {
         <Col desktop={6} tablet={10} mobile={12}>
           {/* Verificar si el carrito está vacío */}
           {cart.length === 0 ? (
-            <div style={{height: "100vh"}}>
+            <div style={{height: "20vh", marginLeft: "1em"}}>
               <p>No hay productos en el carrito</p>
               <StyledLink to="/shop">
                 <BOTON style={{ backgroundColor: "#AC9EB8" }}>Ir al Shop</BOTON>
@@ -120,13 +120,15 @@ const CheckoutContainer = () => {
           
         </Col>
         <Col desktop={6} tablet={12} mobile={12}>
-          <div style={{textAlign: "right", textDecoration: "underline", marginBottom: "1em", cursor: "pointer"}} onClick={handleVaciarCarrito}>Vaciar carrito</div>
+          <div style={{textAlign: "right", textDecoration: "underline", marginRight: "1em", marginBottom: "1em", cursor: "pointer"}} onClick={handleVaciarCarrito}>Vaciar carrito</div>
           <CartDetail cart={cart} getCartTotal={getCartTotal} />
         </Col>
       </Grid>
 
       {/* FORM DE CONTACTO */}
-      <CheckoutForm handleSubmit={placeOrder} />
+      <div style={{margin: "1em"}}>
+        <CheckoutForm handleSubmit={placeOrder} />
+      </div>
         </div>
       )}
 

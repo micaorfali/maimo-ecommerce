@@ -85,7 +85,7 @@ const HeroContainer = styled.div`
         }
 
         p{
-            font-size: 1.8vw;
+            font-size: 1vw;
         }
     }
 
