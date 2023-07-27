@@ -5,14 +5,15 @@ const CountdownContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 5em;
+  font-size: 5vw;
   font-weight: bold;
   font-family: "Abhaya Libre", serif;
   font-weight: 800;
+  margin-bottom: 2em;
 }
 
 .container p{
-    font-size: 3rem;
+    font-size: 3vw;
 }
   
 `;

@@ -25,6 +25,7 @@ const Container = styled.div`
 .SpotifyBkg img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 .containerSubItemsTopArtist{
@@ -47,8 +48,16 @@ const Container = styled.div`
     height: auto;
 }
 
+.diamond{
+    width: 100%;
+}
+
 @media (max-width: 426px) {
     text-align: center;
+
+    .mapa{
+        display: none;
+    }
 }
 
 `

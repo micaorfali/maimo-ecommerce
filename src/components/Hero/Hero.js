@@ -5,6 +5,7 @@ import argflag from "../../imgs/argflag.png";
 import { StyledLink } from "../Common/styled";
 import { BOTON } from "../Common/Common";
 import mirrorball from "../../imgs/mirrorball.png"
+import gemas from "../../imgs/gemas.png"
 
 const Hero = () => {
   return (
@@ -14,9 +15,7 @@ const Hero = () => {
           <div className="content">
             <h1>TAYLOR SWIFT ARGENTINA</h1>
             
-            <img src={mirrorball} alt="icono bandera argentina"></img>
-            <img src={mirrorball} alt="icono bandera argentina"></img>
-            <img src={mirrorball} alt="icono bandera argentina"></img>
+            <img src={gemas} alt="GEMAS BEJEWELED"></img>
             
             <h2>EMPRENDEDORES SWIFTIES</h2>
             <h3>Todos los fans y todos los emprendimientos, en un solo lugar</h3>
